@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  --background: #e2e8f4;
+  --foreground: #1a1a1a;
+  --primary-text: #1a1a1a;
+  --secondary-text: #4b5563;
+  --card-bg: #ffffff;
+  /* shadcn-style for UI components */
+  --primary: #f58220;
+  --primary-foreground: #fff;
+  --accent: #f1f5f9;
+  --accent-foreground: #1a1a1a;
+  --ring: #f58220;
+  --input: #e2e8f0;
+  /* Navbar */
+  --color-sf: #fafafa;
+  --blur-md: 12px;
+  --color-black: #000;
+  --color-st: #e6e6e6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-instrument-serif);
+  --font-mono: var(--font-geist-mono);
+  /* ShimmerButton animations */
+  --animate-shimmer-slide: shimmer-slide var(--speed) ease-in-out infinite alternate;
+  --animate-spin-around: spin-around calc(var(--speed) * 2) infinite linear;
+}
+
+@keyframes shimmer-slide {
+  to {
+    transform: translate(calc(100cqw - 100%), 0);
+  }
+}
+
+@keyframes spin-around {
+  0% {
+    transform: translateZ(0) rotate(0);
+  }
+  15%, 35% {
+    transform: translateZ(0) rotate(90deg);
+  }
+  65%, 85% {
+    transform: translateZ(0) rotate(270deg);
+  }
+  100% {
+    transform: translateZ(0) rotate(360deg);
+  }
+}
+
+/* ShimmerButton animation utilities (Tailwind v4 compatible) */
+.animate-shimmer-slide {
+  animation: shimmer-slide var(--speed) ease-in-out infinite alternate;
+}
+.animate-spin-around {
+  animation: spin-around calc(var(--speed) * 2) infinite linear;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: #e2e8f4;
+  background-image: linear-gradient(
+    180deg,
+    #e2e8f4 0%,
+    #f58220 100%
+  );
+  background-attachment: fixed;
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+.font-serif {
+  font-family: var(--font-instrument-serif), Georgia, serif;
+}
