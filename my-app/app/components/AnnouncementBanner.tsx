@@ -150,7 +150,7 @@ export default function AnnouncementBanner() {
                 "0 1px 0 rgba(100,45,10,0.5), 0 2px 0 rgba(70,30,5,0.35), 0 2px 4px rgba(0,0,0,0.2)",
             }}
           >
-            Indus is live in beta.{" "}
+            Maurya Saws Machine Tools is live.{" "}
             <span
               className="font-semibold"
               style={{
