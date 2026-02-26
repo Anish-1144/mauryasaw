@@ -33,8 +33,12 @@ const barlowCondensed = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: "Sarvam",
-  description: "AI for All from India",
+  title: "mouryasaw",
+  description: "Maurya Saws Machine Tools",
+  icons: {
+    icon: "/logo-3.png",
+    apple: "/logo-3.png",
+  },
 };
 
 export default function RootLayout({
